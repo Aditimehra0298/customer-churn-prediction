@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Churn Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    h1 { color: #333; }
+    #churnChart { max-width: 500px; }
+  </style>
+</head>
+<body>
+  <h1>📈 Customer Churn Prediction Dashboard</h1>
+  <canvas id="churnChart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('churnChart');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Churn', 'No Churn'],
+        datasets: [{
+          label: 'Churn Distribution',
+          data: [26, 74],
+          backgroundColor: ['red', 'green'],
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
